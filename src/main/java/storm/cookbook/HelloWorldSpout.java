@@ -19,7 +19,7 @@ public class HelloWorldSpout extends BaseRichSpout {
 
 	public static Logger LOG = Logger.getLogger(HelloWorldSpout.class);
 
-	SpoutOutputCollector collector;
+	private SpoutOutputCollector collector;
 	
 	private int referenceRandom;
 	

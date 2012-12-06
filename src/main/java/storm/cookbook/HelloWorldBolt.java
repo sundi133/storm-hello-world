@@ -31,6 +31,7 @@ public class HelloWorldBolt extends BaseRichBolt {
 		if(test == "Hello World"){
 			myCount++;
 			System.out.println("Found a Hello World! My Count is now: " + Integer.toString(myCount));
+			LOG.debug("Found a Hello World! My Count is now: " + Integer.toString(myCount));
 		}
 	}
 

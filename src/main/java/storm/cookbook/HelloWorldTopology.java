@@ -16,15 +16,15 @@ public class HelloWorldTopology {
 	public static void main(String[] args) throws Exception {
 		TopologyBuilder builder = new TopologyBuilder();
         
-        builder.setSpout("randomHelloWorld", new HelloWorldSpout(), 10);        
-        builder.setBolt("HelloWorldBolt", new HelloWorldBolt(), 1)
+        builder.setSpout("randomHelloWorld", new HelloWorldSpout(), 2);        
+        builder.setBolt("HelloWorldBolt", new HelloWorldBolt(), 10)
                 .shuffleGrouping("randomHelloWorld");
                 
         Config conf = new Config();
         conf.setDebug(true);
         
         if(args!=null && args.length > 0) {
-            conf.setNumWorkers(3);
+            conf.setNumWorkers(20);
             
             StormSubmitter.submitTopology(args[0], conf, builder.createTopology());
         } else {
