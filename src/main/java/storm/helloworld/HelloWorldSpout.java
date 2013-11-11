@@ -1,4 +1,4 @@
-package storm.cookbook;
+package storm.helloworld;
 
 import java.util.Map;
 import java.util.Random;

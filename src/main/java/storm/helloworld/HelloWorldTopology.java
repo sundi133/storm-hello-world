@@ -1,5 +1,7 @@
-package storm.cookbook;
+package storm.helloworld;
 
+import storm.helloworld.HelloWorldBolt;
+import storm.helloworld.HelloWorldSpout;
 import backtype.storm.Config;
 import backtype.storm.LocalCluster;
 import backtype.storm.StormSubmitter;
